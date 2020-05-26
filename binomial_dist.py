@@ -9,6 +9,7 @@ def dec_to_bin(dec, n_bits=8):
 
     return bin_list[::-1]
 
+
 def get_binary(n_bits=8):
     bins_d = {}
     for i in range(2**n_bits):
@@ -20,6 +21,7 @@ def get_binary(n_bits=8):
 #     print(f'{dec}: {binary}')
 
 d = get_binary()
+# print(d)
 
 def binomial_distr(binary_dict):
     sum_ones = dict()
@@ -34,6 +36,7 @@ def binomial_distr(binary_dict):
     return sum_ones
 
 binomial_dict = binomial_distr(d)
+print(binomial_dict)
 
 for k, v in binomial_dict.items():
     print(f'{k}: {v}')
